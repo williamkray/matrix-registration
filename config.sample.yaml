@@ -1,9 +1,10 @@
 server_location: 'https://matrix.org'
 server_name: 'matrix.org'
+logo_path: 'static/images/riot.png' #can be url
 shared_secret: 'RegistrationSharedSecret'
 admin_secret: 'APIAdminPassword'
 riot_instance: 'https://riot.im/app/'
-db: 'sqlite:///{cwd}db.sqlite3'
+db: 'sqlite:///{cwd}/data/db.sqlite3'
 host: 'localhost'
 port: 5000
 rate_limit: ["100 per day", "10 per minute"]
@@ -29,7 +30,7 @@ logging:
       class: logging.handlers.RotatingFileHandler
       formatter: precise
       level: INFO
-      filename: m_reg.log
+      filename: /data/m_reg.log
       maxBytes: 10485760 # 10MB
       backupCount: 3
       encoding: utf8

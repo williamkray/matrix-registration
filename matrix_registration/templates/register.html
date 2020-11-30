@@ -7,7 +7,7 @@
   <meta property="og:title" content="{{ server_name }} registration">
   <meta property="og:site_name" content="{{ server_name }}">
   <meta property="og:type" content="website" />
-  <meta name="og:description" content="registrate an account on {{ server_name }}" />
+  <meta name="og:description" content="Register a new account on {{ server_name }}" />
   <meta name="og:image" content="{{ url_for('static', filename='images/icon.png') }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/icon.png') }}">
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon32x32.png') }}" sizes="32x32">
@@ -16,17 +16,18 @@
   <meta name="msapplication-TileColor" content="#fff">
   <title>{{ server_name }} registration</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
 </head>
 
 <body class="blur">
   <article class="widget register">
     <div class="center">
       <header>
-        <h1>{{ server_name }} registration</h1>
-        <p>the registration requires a secret token<br>
-          registration does not require an email, just a username and a password that's longer than {{ pw_length }}
-          characters.</p>
+        <h1>{{ server_name }} Account Registration</h1>
+        <p>Enter your desired username,<br />
+        your desired password (twice), <br />
+        and your unique registration token</p>
+        </p>
       </header>
       <section>
         <form id="registration" action="/register" method="post">
@@ -70,8 +71,8 @@
         <h2 id="welcome"></h2>
       </header>
       <section>
-        <p>Click here to login in:</p>
-        <h3><a href="{{ riot_instance }}"><img src="static/images/riot.png" height="50px"></a></h3>
+        <p>Click here to login in to the webapp:</p>
+        <h3><a href="{{ riot_instance }}"><img src="{{ logo_path }}" height="50px"></a></h3>
         <p>or choose one of the many other clients here: <a href="https://matrix.org/docs/projects/clients-matrix"
             a>https://matrix.org/docs/projects/clients-matrix</a></p>
       </section>

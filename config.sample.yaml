@@ -3,6 +3,7 @@ server_name: 'matrix.org'
 logo_path: 'static/images/riot.png' #can be url
 shared_secret: 'RegistrationSharedSecret'
 admin_secret: 'APIAdminPassword'
+base_url: ''
 riot_instance: 'https://riot.im/app/'
 db: 'sqlite:///{cwd}/data/db.sqlite3'
 host: 'localhost'

@@ -3,6 +3,7 @@ with pkgs.python3Packages;
 
 buildPythonPackage rec {
   name = "matrix-registration";
+  # src = ./.;
   propagatedBuildInputs = [
     pkgs.libsndfile
     appdirs
@@ -19,4 +20,11 @@ buildPythonPackage rec {
     wtforms
     setuptools
   ];
+  checkInputs = [
+    flake8
+    parameterized
+  ];
+  # shellHook = ''
+  #   unset SOURCE_DATE_EPOCH
+  # '';
 }
